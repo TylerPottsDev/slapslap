@@ -63,6 +63,7 @@ public class NetworkRelay : MonoBehaviour {
 			NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(data);
 
 			NetworkManager.Singleton.StartClient();
+			
 			joinCode = _joinCode;
 
 			onJoinOrCreate.Invoke();
