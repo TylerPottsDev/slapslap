@@ -21,9 +21,7 @@ public class PlayerMovement : NetworkBehaviour {
 	private void Update() {
 		if (!IsOwner) return;
 
-		isGrounded = Physics2D.OverlapCircle(feet.position, 0.1f, platformLayers);
-
-		if (isGrounded) jumpCount = 0;
+		isGrounded = Physics2D.OverlapCircle(feet.position, 0.25f, platformLayers);
 
 		mx = Input.GetAxisRaw("Horizontal");
 
@@ -39,6 +37,8 @@ public class PlayerMovement : NetworkBehaviour {
 	}
 
 	private void Jump() {
+		if (isGrounded) jumpCount = 0;
+
 		if (isGrounded || jumpCount < maxJumps) {
 			jumpCount++;
 			rb.velocity = new Vector2(rb.velocity.x, jumpForce);

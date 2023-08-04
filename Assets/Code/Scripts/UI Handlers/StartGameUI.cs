@@ -10,11 +10,11 @@ public class StartGameUI : MonoBehaviour {
 
 	NetworkManager network;
 
-	private void Awake() {
-		network = NetworkManager.Singleton;
-	}
-
 	private void OnEnable() {
+		if (network == null) {
+			network = NetworkManager.Singleton;
+		}
+		
 		network.OnClientConnectedCallback += CheckPlayerCount;
 		network.OnClientDisconnectCallback += CheckPlayerCount;
 	}

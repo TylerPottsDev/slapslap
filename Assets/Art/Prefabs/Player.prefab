@@ -54,7 +54,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 494a6cdac6da7974cb4acf6468f0be19, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   feet: {fileID: 2374293863406616964}
   maxJumps: 2
   jumpForce: 20
-  moveSpeed: 5
+  moveSpeed: 10
   platformLayers:
     serializedVersion: 2
     m_Bits: 64
