@@ -10,7 +10,7 @@ public class StartGameUI : MonoBehaviour {
 
 	NetworkManager network;
 
-	private void Start() {
+	private void Awake() {
 		network = NetworkManager.Singleton;
 	}
 
